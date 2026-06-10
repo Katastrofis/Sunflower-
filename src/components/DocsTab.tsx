@@ -213,7 +213,7 @@ export const DocsTab: React.FC = () => {
 
   const interactiveFlows = [
     {
-      title: "Flow de Cadastro de Decisão (Sunflower)",
+      title: "Flow de Cadastro de Decisão (sunflower)",
       steps: [
         { label: "1. Inicialização", desc: "O designer seleciona o contexto, dá um título humilde e transparente à decisão estratégica." },
         { label: "2. Seleção Metodológica", desc: "Associa o log a uma metodologia visual como Double Diamond ou Design Thinking para dar trilha de raciocínio estruturado." },
@@ -226,9 +226,9 @@ export const DocsTab: React.FC = () => {
       title: "Flow de Integração & Referência de Links Remotos",
       steps: [
         { label: "1. Fornecer URL externa", desc: "O designer cola o link direto de seu portfólio no Behance ou do arquivo no Figma." },
-        { label: "2. Higienização de Protocolo", desc: "A camada Sunflower valida sintaticamente a URL de destino (HTTPS obrigatório!)." },
+        { label: "2. Higienização de Protocolo", desc: "A camada sunflower valida sintaticamente a URL de destino (HTTPS obrigatório!)." },
         { label: "3. Identificação Gráfica", desc: "O template determina a origem (ex: Behance, Figma) e carrega o badge visual correto." },
-        { label: "4. Escopo Zero-Storage", desc: "Os metadados originais permanecem na plataforma parceira. Sunflower serve apenas como ponte de navegação ativa." }
+        { label: "4. Escopo Zero-Storage", desc: "Os metadados originais permanecem na plataforma parceira. sunflower serve apenas como ponte de navegação ativa." }
       ]
     }
   ];

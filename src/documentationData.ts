@@ -17,7 +17,7 @@ export const specSections: SpecSection[] = [
     title: "1. Arquitetura Conceitual",
     subtitle: "Estrutura geral de módulos e relacionamento cliente-servidor",
     category: "arquitetura",
-    markdown: `A plataforma **Sunflower** foi desenhada sob um modelo arquitetural leve e modular, otimizada para evitar sobrecarga de armazenamento de ativos e focada totalmente na facilitação do diálogo de decisões críticas.
+    markdown: `A plataforma **sunflower** foi desenhada sob um modelo arquitetural leve e modular, otimizada para evitar sobrecarga de armazenamento de ativos e focada totalmente na facilitação do diálogo de decisões críticas.
 
 ### Visão Geral dos Módulos Principais:
 * **Módulo de Catalogação (Log Generator):** Motor onde o designer insere os dados estruturados baseando-se em metodologias existentes (Double Diamond, Design Thinking, etc.).
@@ -25,7 +25,7 @@ export const specSections: SpecSection[] = [
 * **Espaço de Times (Collaboration Hub):** Gerenciador de espaços de trabalho para alinhar membros e sincronizar as restrições e visões nos projetos comuns.
 * **Motor de Relatórios (PDF & Print compiler):** Compilador cliente-servidor que reúne e normaliza as tomadas de decisões cronologicamente em um blueprint legível e portável.
 
-### FLUXO DE COMPONENTES SUNFLOWER:
+### FLUXO DE COMPONENTES sunflower:
 \`\`\`
 [ DESIGNER CLIENT ] 
       │ 
@@ -47,7 +47,7 @@ export const specSections: SpecSection[] = [
     category: "dados",
     markdown: `Para honrar a diretriz de **não funcionar como banco de dados de arquivos**, a modelagem preserva apenas dados textuais, relacionais estruturados e ponteiros seguros.
 
-### O Que É Armazenado (Banco de Dados Sunflower):
+### O Que É Armazenado (Banco de Dados sunflower):
 1. **Perfil do Usuário:** ID exclusivo, nome completo, cargo/especialidade e e-mail único.
 2. **Registro de Decisão (DecisionLog):**
    * ID único, título, nome do projeto.
@@ -62,14 +62,14 @@ export const specSections: SpecSection[] = [
 
 ### O Que É Apenas Referenciado (Sem Armazenamento de Arquivos):
 * **Ativos Visuais e Protótipos:** Links diretos com protocolo HTTPS (Figma, Behance, GitHub, Instagram, etc.).
-* **Arquivos de Especificação:** Links ativos de armazenamento em nuvem externa administrada pelo usuário (Drive, Dropbox). No Sunflower, apenas armazenamos a URL ativa, a plataforma atua como um coordenador de inteligência de processos criativos.`
+* **Arquivos de Especificação:** Links ativos de armazenamento em nuvem externa administrada pelo usuário (Drive, Dropbox). No sunflower, apenas armazenamos a URL ativa, a plataforma atua como um coordenador de inteligência de processos criativos.`
   },
   {
     id: "feat-3",
     title: "3. Priorização de Funcionalidades",
     subtitle: "Matriz de prioridade (Impacto vs Esforço) para o roadmap de desenvolvimento",
     category: "features",
-    markdown: `Para o MVP da plataforma Sunflower, desenhamos a seguinte prioridade estratégica de entrega:
+    markdown: `Para o MVP da plataforma sunflower, desenhamos a seguinte prioridade estratégica de entrega:
 
 | Feature | Prioridade | Impacto | Esforço | Descrição |
 | :--- | :--- | :--- | :--- | :--- |
@@ -113,7 +113,7 @@ export const specSections: SpecSection[] = [
     title: "5. Diretrizes de Design de Interface (UI/UX)",
     subtitle: "Pilares visuais para manter a simplicidade e clareza",
     category: "design",
-    markdown: `Sunflower é desenhado **pelos designers, para os designers**. Isso exige o ápice do minimalismo e sofisticação visual — um design limpo e funcional focado no texto e no processo, livre de exageros ornamentais de inteligência artificial.
+    markdown: `sunflower é desenhado **pelos designers, para os designers**. Isso exige o ápice do minimalismo e sofisticação visual — um design limpo e funcional focado no texto e no processo, livre de exageros ornamentais de inteligência artificial.
 
 ### Princípios de Design Aplicados:
 * **Tipografia Rítmica:** Escolha rigorosa da fonte **Inter** para leitura limpa com espaços largos de entrelinha, acompanhada de **JetBrains Mono** para metadados técnicos de projeto.
@@ -124,9 +124,9 @@ export const specSections: SpecSection[] = [
   {
     id: "sec-6",
     title: "6. Estratégia de Links Externos Seguros",
-    subtitle: "Como o Sunflower atua como um hub agnóstico de dados ativos",
+    subtitle: "Como o sunflower atua como um hub agnóstico de dados ativos",
     category: "seguranca",
-    markdown: `Para garantir integridade jurídica e segurança de dados, a plataforma Sunflower segue regras estritas de tráfego agnóstico de links:
+    markdown: `Para garantir integridade jurídica e segurança de dados, a plataforma sunflower segue regras estritas de tráfego agnóstico de links:
 
 1. **Protocolo HTTPS Mandatório:** Todos os links fornecidos passam por filtro corretivo sanitário obrigatório de formato. URLs inseguras (HTTP puro) ou sem domínios válidos são vetadas.
 2. **Sandbox de Redirecionamento (No-Storage Redirect):**
@@ -139,7 +139,7 @@ export const specSections: SpecSection[] = [
     title: "7. Recomendações Técnicas Basilares",
     subtitle: "Especificações sugeridas de infraestrutura e stack tecnológica",
     category: "tech",
-    markdown: `Para o desenvolvimento e escalabilidade ideal da Sunflower, recomendamos o seguinte ecossistema tecnológico robusto:
+    markdown: `Para o desenvolvimento e escalabilidade ideal da sunflower, recomendamos o seguinte ecossistema tecnológico robusto:
 
 ### Frontend & Experiência de Uso (Client App):
 * **Framework principal:** React 19 (com Vite para carregamento ultra-rápido).

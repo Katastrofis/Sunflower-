@@ -26,7 +26,7 @@ export default function App() {
             <div>
               <div className="flex items-center gap-2">
                 <h1 className="font-display font-bold text-lg md:text-xl text-white tracking-tight uppercase">
-                  Sunflower
+                  sunflower
                 </h1>
                 <span className="px-2 py-0.5 bg-[#FFD43B]/10 border border-[#222225] text-[#FFD43B] text-[9px] font-mono font-bold rounded-full uppercase tracking-wider">
                   Bento Grid Theme
@@ -80,10 +80,10 @@ export default function App() {
           </div>
           <div className="space-y-1.5 flex-1">
             <h4 className="font-display font-semibold text-xs md:text-sm text-[#F4F4F6] uppercase tracking-wider flex items-center gap-1.5">
-              Hub Coordenador Sunflower • Zero Storage Policy
+              Hub Coordenador sunflower • Zero Storage Policy
             </h4>
             <p className="text-[#A3A198] text-xs md:text-xs leading-relaxed max-w-5xl">
-              De acordo com a arquitetura descrita nas especificações Bento, a Sunflower **não atua como repositório de arquivos de imagem ou portfólio**. Operamos como um hub abstrato leve de metadados focados na jornada conceitual. Links diretos seguros de Figma/Behance mantêm a privacidade original.
+              De acordo com a arquitetura descrita nas especificações Bento, a sunflower **não atua como repositório de arquivos de imagem ou portfólio**. Operamos como um hub abstrato leve de metadados focados na jornada conceitual. Links diretos seguros de Figma/Behance mantêm a privacidade original.
             </p>
           </div>
         </section>
@@ -100,10 +100,10 @@ export default function App() {
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-2">
             <Sun className="w-4 h-4 text-[#FFD43B]" />
-            <span className="font-display font-semibold text-[#F4F4F6] tracking-wider uppercase text-xs">Sunflower Architecture</span>
+            <span className="font-display font-semibold text-[#F4F4F6] tracking-wider uppercase text-xs">sunflower Architecture</span>
           </div>
           <p className="text-[11px] text-[#A3A198]">
-            © 2026 Sunflower Collaborative Architecture • Traffic: Encrypted P2P Hub
+            © 2026 sunflower Collaborative Architecture • Traffic: Encrypted P2P Hub
           </p>
           <div className="text-[10px] font-mono text-[#F4F4F6] bg-[#0E0E10] border border-[#222225] rounded px-2.5 py-1 flex items-center gap-1.5 font-bold uppercase tracking-wider">
             <Award className="w-3.5 h-3.5 text-[#FFD43B]" /> Status: Syncing Nodes

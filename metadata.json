@@ -1,6 +1,6 @@
 {
-  "name": "Sunflower Platform Guide",
-  "description": "Documentação técnica, conceito arquitetural e protótipo interativo da plataforma colaborativa Sunflower para tomada de decisões criativas.",
+  "name": "sunflower Platform Guide",
+  "description": "Documentação técnica, conceito arquitetural e protótipo interativo da plataforma colaborativa sunflower para tomada de decisões criativas.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }

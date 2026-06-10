@@ -124,7 +124,7 @@ export const DashboardTab: React.FC = () => {
     const newComment: Comment = {
       id: `comm-${Date.now()}`,
       authorName: commenterName || "Designer Anônimo",
-      authorRole: "Comunidade Sunflower",
+      authorRole: "Comunidade sunflower",
       content: commentContent,
       createdAt: new Date().toISOString()
     };
@@ -184,7 +184,7 @@ export const DashboardTab: React.FC = () => {
 
     setInviteEmail("");
     setInviteName("");
-    alert(`Sucesso! Convite dinâmico para a Sunflower enviado para ${inviteEmail}.`);
+    alert(`Sucesso! Convite dinâmico para a sunflower enviado para ${inviteEmail}.`);
   };
 
   // Web service link staging simulation
@@ -420,7 +420,7 @@ export const DashboardTab: React.FC = () => {
                             target="_blank"
                             rel="noopener noreferrer"
                             className="inline-flex items-center gap-1.5 px-3 py-1 bg-[#0E0E10] border border-[#222225] hover:border-[#FFD43B] rounded-lg text-xs font-semibold text-[#A3A198] hover:text-white transition-all shadow-sm"
-                            title="O Sunflower atua de maneira transparente redirecionando link sem armazenar dados pesados"
+                            title="O sunflower atua de maneira transparente redirecionando link sem armazenar dados pesados"
                           >
                             {getPlatformIcon(link.platform)}
                             <span>{link.label}</span>
@@ -884,12 +884,12 @@ export const DashboardTab: React.FC = () => {
             <div className="bg-[#0E0E10] p-6 md:p-10 border border-[#222225] rounded-2xl shadow-xs print-only space-y-8 font-sans max-h-[60vh] overflow-y-auto text-[#A3A198]">
               <div className="flex flex-col md:flex-row md:items-center justify-between border-b-2 border-[#222225] pb-5 gap-4">
                 <div className="space-y-1">
-                  <div className="font-mono text-[10px] text-[#FFD43B] font-bold tracking-widest uppercase">Relatório de Decisão • Sunflower</div>
+                  <div className="font-mono text-[10px] text-[#FFD43B] font-bold tracking-widest uppercase">Relatório de Decisão • sunflower</div>
                   <h1 className="font-display font-bold text-2xl text-white leading-tight">Projeto: {activeReportProject}</h1>
                   <p className="text-[11px] text-[#7C7A72]">Gerado automaticamente em {new Date().toLocaleDateString("pt-BR")}</p>
                 </div>
                 <div className="text-right">
-                  <div className="font-display font-bold text-[#FFD43B] text-lg">SUNFLOWER</div>
+                  <div className="font-display font-bold text-[#FFD43B] text-lg">sunflower</div>
                   <div className="font-mono text-[9px] text-[#7C7A72]">Ativos & Decisões Mapeados</div>
                 </div>
               </div>
