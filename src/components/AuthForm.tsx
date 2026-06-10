@@ -6,9 +6,11 @@ export function AuthForm() {
   const [user, setUser] = useState<User | null>(null);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [confirmPassword, setConfirmPassword] = useState('');
   const [message, setMessage] = useState('');
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
+  const [isSignUp, setIsSignUp] = useState(false);
 
   useEffect(() => {
     async function loadSession() {
@@ -42,6 +44,42 @@ export function AuthForm() {
       setMessage('Login realizado com sucesso.');
       setEmail('');
       setPassword('');
+      setConfirmPassword('');
+    }
+
+    setLoading(false);
+  };
+
+  const handleSignUp = async (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    setError('');
+    setMessage('');
+
+    if (password !== confirmPassword) {
+      setError('As senhas não correspondem.');
+      return;
+    }
+
+    if (password.length < 6) {
+      setError('A senha deve ter pelo menos 6 caracteres.');
+      return;
+    }
+
+    setLoading(true);
+
+    const { error } = await supabase.auth.signUp({
+      email,
+      password,
+    });
+
+    if (error) {
+      setError(error.message);
+    } else {
+      setMessage('Registro realizado com sucesso! Verifique seu email para confirmar a conta.');
+      setEmail('');
+      setPassword('');
+      setConfirmPassword('');
+      setTimeout(() => setIsSignUp(false), 3000);
     }
 
     setLoading(false);
@@ -91,37 +129,91 @@ export function AuthForm() {
             </button>
           </div>
         ) : (
-          <form onSubmit={handleLogin} className="grid gap-4">
-            <label className="grid gap-2 text-sm text-[#A3A198]">
-              Email
-              <input
-                type="email"
-                value={email}
-                onChange={(event) => setEmail(event.target.value)}
-                required
-                className="w-full rounded-2xl border border-[#222225] bg-[#0E0E10] px-4 py-3 text-sm text-white outline-none focus:border-[#FFD43B]"
-              />
-            </label>
+          <>
+            <div className="flex gap-2 mb-4">
+              <button
+                type="button"
+                onClick={() => {
+                  setIsSignUp(false);
+                  setError('');
+                  setMessage('');
+                  setEmail('');
+                  setPassword('');
+                  setConfirmPassword('');
+                }}
+                className={`flex-1 rounded-xl px-4 py-2 text-sm font-semibold transition ${
+                  !isSignUp
+                    ? 'bg-[#FFD43B] text-black'
+                    : 'bg-[#0E0E10] text-[#A3A198] border border-[#222225] hover:text-[#F4F4F6]'
+                }`}
+              >
+                Login
+              </button>
+              <button
+                type="button"
+                onClick={() => {
+                  setIsSignUp(true);
+                  setError('');
+                  setMessage('');
+                  setEmail('');
+                  setPassword('');
+                  setConfirmPassword('');
+                }}
+                className={`flex-1 rounded-xl px-4 py-2 text-sm font-semibold transition ${
+                  isSignUp
+                    ? 'bg-[#FFD43B] text-black'
+                    : 'bg-[#0E0E10] text-[#A3A198] border border-[#222225] hover:text-[#F4F4F6]'
+                }`}
+              >
+                Registrar
+              </button>
+            </div>
 
-            <label className="grid gap-2 text-sm text-[#A3A198]">
-              Senha
-              <input
-                type="password"
-                value={password}
-                onChange={(event) => setPassword(event.target.value)}
-                required
-                className="w-full rounded-2xl border border-[#222225] bg-[#0E0E10] px-4 py-3 text-sm text-white outline-none focus:border-[#FFD43B]"
-              />
-            </label>
+            <form onSubmit={isSignUp ? handleSignUp : handleLogin} className="grid gap-4">
+              <label className="grid gap-2 text-sm text-[#A3A198]">
+                Email
+                <input
+                  type="email"
+                  value={email}
+                  onChange={(event) => setEmail(event.target.value)}
+                  required
+                  className="w-full rounded-2xl border border-[#222225] bg-[#0E0E10] px-4 py-3 text-sm text-white outline-none focus:border-[#FFD43B]"
+                />
+              </label>
 
-            <button
-              type="submit"
-              disabled={loading}
-              className="rounded-2xl bg-[#FFD43B] px-4 py-3 text-sm font-semibold text-black transition hover:bg-[#e0bf31] disabled:opacity-60"
-            >
-              {loading ? 'Entrando...' : 'Login'}
-            </button>
-          </form>
+              <label className="grid gap-2 text-sm text-[#A3A198]">
+                Senha
+                <input
+                  type="password"
+                  value={password}
+                  onChange={(event) => setPassword(event.target.value)}
+                  required
+                  className="w-full rounded-2xl border border-[#222225] bg-[#0E0E10] px-4 py-3 text-sm text-white outline-none focus:border-[#FFD43B]"
+                />
+              </label>
+
+              {isSignUp && (
+                <label className="grid gap-2 text-sm text-[#A3A198]">
+                  Confirmar Senha
+                  <input
+                    type="password"
+                    value={confirmPassword}
+                    onChange={(event) => setConfirmPassword(event.target.value)}
+                    required
+                    className="w-full rounded-2xl border border-[#222225] bg-[#0E0E10] px-4 py-3 text-sm text-white outline-none focus:border-[#FFD43B]"
+                  />
+                </label>
+              )}
+
+              <button
+                type="submit"
+                disabled={loading}
+                className="rounded-2xl bg-[#FFD43B] px-4 py-3 text-sm font-semibold text-black transition hover:bg-[#e0bf31] disabled:opacity-60"
+              >
+                {loading ? (isSignUp ? 'Registrando...' : 'Entrando...') : (isSignUp ? 'Registrar' : 'Login')}
+              </button>
+            </form>
+          </>
         )}
 
         {error ? <p className="text-sm text-[#FF6B6B]">{error}</p> : null}
