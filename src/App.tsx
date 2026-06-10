@@ -6,6 +6,7 @@
 import React, { useState } from "react";
 import { DocsTab } from "./components/DocsTab";
 import { DashboardTab } from "./components/DashboardTab";
+import { AuthForm } from "./components/AuthForm";
 import { BookOpen, MonitorPlay, Sun, ShieldAlert, Award } from "lucide-react";
 
 export default function App() {
@@ -87,6 +88,8 @@ export default function App() {
             </p>
           </div>
         </section>
+
+        <AuthForm />
 
         {/* Dynamic View Injection */}
         <div className="py-2">
